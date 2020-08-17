@@ -131,7 +131,7 @@ int pa__init(pa_module *m) {
     /* default value if no module parameter */
     enable_native_hfp_hf = (headset_backend == HEADSET_BACKEND_NATIVE);
 
-    autodetect_mtu = false;
+    autodetect_mtu = true;
     if (pa_modargs_get_value_boolean(ma, "autodetect_mtu", &autodetect_mtu) < 0) {
         pa_log("Invalid boolean value for autodetect_mtu parameter");
     }
