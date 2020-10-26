@@ -20,8 +20,7 @@
 #define PACKAGE
 #define HAVE_ATOMIC_BUILTINS
 
-#cmakedefine HAVE_BLUEZ_5_OFONO_HEADSET
-#cmakedefine HAVE_BLUEZ_5_NATIVE_HEADSET
+#cmakedefine HAVE_BLUEZ_5_LEGACY_HSP
 #define PACKAGE_VERSION "@PulseAudio_VERSION@"
 
 #cmakedefine PA_A2DP_CODEC_APTX_FF

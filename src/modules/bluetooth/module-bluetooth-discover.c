@@ -1,23 +1,22 @@
-/*
- *  pulseaudio-modules-bt
- *
- *  Copyright  2013       João Paulo Rechi Vita
- *  Copyright  2018-2019  Huang-Huang Bao
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+/***
+  This file is part of PulseAudio.
 
- *  You should have received a copy of the GNU General Public License
- *  along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
- */
+  Copyright 2013 João Paulo Rechi Vita
+
+  PulseAudio is free software; you can redistribute it and/or modify
+  it under the terms of the GNU Lesser General Public License as
+  published by the Free Software Foundation; either version 2.1 of the
+  License, or (at your option) any later version.
+
+  PulseAudio is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with PulseAudio; if not, see <http://www.gnu.org/licenses/>.
+***/
+
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
@@ -30,10 +29,6 @@ PA_MODULE_AUTHOR("João Paulo Rechi Vita");
 PA_MODULE_DESCRIPTION("Detect available Bluetooth daemon and load the corresponding discovery module");
 PA_MODULE_VERSION(PACKAGE_VERSION);
 PA_MODULE_LOAD_ONCE(true);
-PA_MODULE_USAGE(
-    "headset=ofono|native|auto (bluez 5 only)"
-    "autodetect_mtu=<boolean> (bluez 5 only)"
-);
 
 struct userdata {
     uint32_t bluez5_module_idx;
